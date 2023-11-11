@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Story Reader</title>
+    <link href='https://fonts.googleapis.com/css?family=Mukta' rel='stylesheet'>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        main {
+            display: flex;
+            flex-direction: column;
+            max-width: 700px;
+            min-height: 700px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-sizing:border-box;
+           box-shadow: 0px 10px 20px 5px rgba(160, 248, 248, 0.7);
+            /* box-shadow: 0px 10px 20px 2px rgba(8, 7, 7, 0.1); */
+        }
+
+        h1 {
+            font-size: 24px;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        button {
+            /* display: none; */
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            /* justify-content: flex-start; */
+            /* cursor: pointer; */
+            /* float: inline-end; */
+
+        }
+
+        button:hover {
+            background-color: #555;
+        }
+        #text{
+            font-size: 20px;
+            line-height: 2.5;
+            min-height: 100%;
+            min-width: 100%;
+            border: 0px solid;
+            font-family: 'Mukta';
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <!-- STORY TITLE -->
+        <h1>The man who moved a mountain</h1>
+    </header>
+    <main>
+       <nav> <h1>Chapter 1</h1></nav>
+        <div id="text"></div>
+        <!-- <footer><button id="next-button">Next Chapter</button></footer> -->
+    </main>
+
+    <script>
+       
+        
+        const textElement = document.getElementById("text");
+        const text = `There are people who say love can move mountains. This might not be physically possible, but Dashrath Manjhi, also known as the ‘Mountain Man’, came quite close. In one day of his life, his wife fell while crossing a nearby hill and hurt herself seriously. She needed quick medical assistance, but that wasn’t possible due to the hill that isolated their small village from the next town. Tragically enough, his wife died from the serious injuries before Dashrath could do anything about it. It was the night when Dashrath Manjhi decided to carve a small path through the mountain in order to give his village easier access to medical assistance.
+
+After working for 22 years
+
+It was an ambitious plan and he was heavily ridiculed for it. But after working for 22 years with the greatest determination and willpower, a path was carved into the hill. Even though he was initially mocked and ridiculed for his mission to give his hometown easier access to the nearby town, he finally succeeded. His life’s work helped to reduce the distance between the two towns from 55 km to only 15 km, so that never again such a thing would happen.
+There are people who say love can move mountains. This might not be physically possible, but Dashrath Manjhi, also known as the ‘Mountain Man’, came quite close. In one day of his life, his wife fell while crossing a nearby hill and hurt herself seriously. She needed quick medical assistance, but that wasn’t possible due to the hill that isolated their small village from the next town. Tragically enough, his wife died from the serious injuries before Dashrath could do anything about it. It was the night when Dashrath Manjhi decided to carve a small path through the mountain in order to give his village easier access to medical assistance.
+
+After working for 22 years
+
+It was an ambitious plan and he was heavily ridiculed for it. But after working for 22 years with the greatest determination and willpower, a path was carved into the hill. Even though he was initially mocked and ridiculed for his mission to give his hometown easier access to the nearby town, he finally succeeded. His life’s work helped to reduce the distance between the two towns from 55 km to only 15 km, so that never again such a thing would happen.`;
+        let index = 0;
+
+        function type() {
+          if (index < text.length) {
+            textElement.innerHTML += text.charAt(index);
+            index++;
+            setTimeout(type, 80);
+          }
+        }
+        type();
+        // if(type()){
+       
+        // }
+    </script>
+</body>
+</html>
